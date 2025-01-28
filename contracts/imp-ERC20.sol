@@ -99,7 +99,7 @@ contract ERC20Imp {
         allowances[_from][msg.sender] -= _amount;
         balances[_from] -= _amount;
         balances[_to] += _amount;
-        emit Transfer(msg.sender, _to, _amount);
+        emit Transfer(_from, _to, _amount);
         return true;
     }
 
